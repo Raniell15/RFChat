@@ -24,6 +24,11 @@ app.use(express.urlencoded({ extended: true, limit: "5mb" }));
 app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/message", messageRoutes);
+app.all("/*splat", (req, res) => {
+  res.status(404).json({
+    message: `The URL ${req.originalUrl} doesn't exist`,
+  });
+});
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
