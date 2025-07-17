@@ -23,12 +23,6 @@ app.use(express.json({ limit: "5mb" }));
 app.use(express.urlencoded({ extended: true, limit: "5mb" }));
 app.use(cookieParser());
 
-app.use("*all", (req, res) => {
-  res.status(404).json({
-    message: `The URL ${req.originalUrl} doesn't exist`,
-  });
-});
-
 app.use("/api/auth", authRoutes);
 app.use("/api/message", messageRoutes);
 
