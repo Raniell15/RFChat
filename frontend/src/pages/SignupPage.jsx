@@ -45,13 +45,13 @@ const SignupPage = () => {
         <div
           className={`${
             isDarkMode ? "bg-black" : "bg-white"
-          } grid grid-cols-2 p-10 gap-x-10`}
+          } grid  p-10 gap-x-10 justify-center items-center sm:grid-cols-2`}
           style={{ borderRadius: "15px" }}
         >
           <form
             action=""
             onSubmit={handleSubmit}
-            className="fieldset rounded-box w-xs p-4 space-y-2"
+            className="fieldset flex-col rounded-box w-xs space-y-2 justify-center items-center"
           >
             <div>
               <div className="flex gap-0.5">
@@ -212,7 +212,7 @@ const SignupPage = () => {
               </Link>
             </p>
           </form>
-          <div className="max-w-xs place-items-center text-justify space-y-5 pt-5 ">
+          <div className="hidden sm:block max-w-xs place-items-center text-justify space-y-5 pt-5">
             <img src="/RF.svg" className="h-14" />
             <img style={{ borderRadius: "15px" }} src="/callcentercat.jpg" />
             <p

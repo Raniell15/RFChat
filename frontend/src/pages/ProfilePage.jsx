@@ -75,7 +75,7 @@ const ProfilePage = () => {
             <input
               id="fullname"
               type="text"
-              className="input app-input pr-32"
+              className="input app-input sm:pr-32"
               value={authUser.fullName}
               disabled={true}
             />
@@ -94,7 +94,7 @@ const ProfilePage = () => {
               disabled={true}
               id="email"
               type="email"
-              className="app-input input pr-32"
+              className="app-input input sm:pr-32"
               value={authUser.email}
             />
           </div>
